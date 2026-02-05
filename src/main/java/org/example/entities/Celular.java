@@ -39,7 +39,7 @@ public class Celular {
         this.model = model;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -53,16 +53,5 @@ public class Celular {
 
     public void setStock(int stock) {
         this.stock = stock;
-    }
-
-    @Override
-    public String toString() {
-        String formatText = "%-5s %-15s %-20s %-10s%n";
-
-        return String.format(formatText,
-                this.id,
-                this.brand,
-                this.model,
-                String.format("$ %.2f", this.price));
     }
 }

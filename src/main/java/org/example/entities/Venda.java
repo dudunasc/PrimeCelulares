@@ -56,4 +56,5 @@ public class Venda {
     public void setDataVenda(LocalDate dataVenda) {
         this.dataVenda = dataVenda;
     }
+
 }
