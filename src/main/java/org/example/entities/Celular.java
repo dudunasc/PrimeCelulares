@@ -4,7 +4,7 @@ public class Celular {
     private int id;
     private String brand;
     private String model;
-    private double price;
+    private float price;
     private int stock;
 
     public Celular(int id, String brand, String model, float price, int stock) {
@@ -43,7 +43,7 @@ public class Celular {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -53,5 +53,19 @@ public class Celular {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    @Override
+    public String toString() {
+        return brand + (" ") + model;
+    }
+
+    public void status(){
+        System.out.println("Sobre o celular: ");
+        System.out.println("Marca: " + this.brand);
+        System.out.println("Modelo: " + this.model);
+        System.out.println("Está custando R$" + this.price);
+        System.out.println("Ainda tem " + this.stock + " unidades no estoque.");
+
     }
 }

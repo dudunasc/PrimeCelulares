@@ -6,10 +6,10 @@ public class Venda {
     private int id;
     private Cliente cliente;
     private Celular celular;
-    private double valorCompra;
+    private float valorCompra;
     private LocalDate dataVenda;
 
-    public Venda(int id, Cliente cliente, Celular celular, double valorCompra, LocalDate dataVenda) {
+    public Venda(int id, Cliente cliente, Celular celular, float valorCompra, LocalDate dataVenda) {
         this.id = id;
         this.cliente = cliente;
         this.celular = celular;
@@ -45,7 +45,7 @@ public class Venda {
         return valorCompra;
     }
 
-    public void setValorCompra(double valorCompra) {
+    public void setValorCompra(float valorCompra) {
         this.valorCompra = valorCompra;
     }
 
@@ -57,4 +57,12 @@ public class Venda {
         this.dataVenda = dataVenda;
     }
 
+    public void status(){
+        System.out.println("\n-------------------------------\n");
+        System.out.println("Compra efetuada!");
+        System.out.println("Obrigado " + getCliente() + ", volte sempre!");
+        System.out.println("Você adquiriu um " + getCelular());
+        System.out.println("Esse foi o valor da sua compra: R$" + getValorCompra());
+
+    }
 }

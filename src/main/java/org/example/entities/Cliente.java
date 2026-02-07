@@ -2,11 +2,11 @@ package org.example.entities;
 
 public class Cliente {
     private int id;
-    private int name;
+    private String name;
     private String CPF;
     private String telefone;
 
-    public Cliente(int id, int name, String CPF, String telefone) {
+    public Cliente(int id, String name, String CPF, String telefone) {
         this.id = id;
         this.name = name;
         this.CPF = CPF;
@@ -21,11 +21,11 @@ public class Cliente {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName(){
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -43,5 +43,17 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public void status(){
+        System.out.println("Sobre o cliente: ");
+        System.out.println("Nome: " + this.name);
+        System.out.println("CPF: " + this.CPF);
+        System.out.println("Número de contato: " + this.telefone);
     }
 }
